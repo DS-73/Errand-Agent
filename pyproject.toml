@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orangeinvest-errand-agent"
+version = "0.1.0"
+description = "A local, approval-safe home-services errand agent with deterministic mocks and offline evals."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "OrangeInvest Assessment" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "httpx>=0.26"]
+web = ["fastapi>=0.109", "uvicorn[standard]>=0.27"]
+
+[project.scripts]
+errand-agent-web = "errand_agent.web.webapp:main"
+
+[tool.setuptools.packages.find]
+include = ["errand_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

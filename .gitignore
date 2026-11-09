@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local runtime data
+data/
+*.db
+*.db-journal
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Keep checked-in deliverable traces; ignore ad-hoc ones
+traces/cli_trace.jsonl
+
+# Frontend
+node_modules/
+package-lock.json
+dist/
